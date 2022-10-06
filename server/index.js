@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://tmfrl040622:k48989955@cluster0.4s8m2sd.mongodb.n
 app.get('/api/hello', (req, res) => {
     res.send("ㅎㅇ")
 })
-app.post('/api/user/register', (req, res) => {
+app.post('/api/users/register', (req, res) => {
     const user = new User(req.body)
     user.save((err, userInfo) => {
         if (err) {
@@ -34,7 +34,7 @@ app.post('/api/user/register', (req, res) => {
     })
 })
 
-app.post('/login', (req, res) => {
+app.post('/api/users/login', (req, res) => {
     User.findOne({ email: req.body.email }, (err, user) => {
         if (!user) {
             return res.json({
