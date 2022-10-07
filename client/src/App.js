@@ -2,6 +2,7 @@ import React from 'react';
 import LandingPage from './components/views/LandingPage/LandingPage.js'
 import LoginPage from './components/views/LoginPage/LoginPage.js'
 import RegisterPage from './components/views/RegisterPage/RegisterPage.js'
+import Auth from './hoc/auth'
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,9 +25,9 @@ function App() {
           of them to render at a time
         */}
         <Routes>
-            <Route path='/' element={<LandingPage />} />
-            <Route path="/Login" element={<LoginPage />}/> 
-            <Route path="/Register" element={<RegisterPage />}/>
+            <Route path='/' element={Auth(LandingPage , null)} />
+            <Route path="/Login" element={Auth(LoginPage , false)}/> 
+            <Route path="/Register" element={Auth(RegisterPage , false)}/>
         </Routes>
       </div>
     </Router>

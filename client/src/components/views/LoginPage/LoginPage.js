@@ -25,8 +25,7 @@ function LoginPage(props) {
             email: Email,
             Password: Password
         }
-        
-        /*dispatch(loginUser(body))
+        /*dispatch(loginUser(body)) <<dispatch onSubmitHandler 함수 밖으로 꺼내야되는데 어케 꺼내지..흠.....
             .then(response => {
                 if(response.payload.loginSuccess){
                     props.history.push('/')
