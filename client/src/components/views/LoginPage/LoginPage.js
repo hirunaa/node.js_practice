@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 //import { Axios } from 'axios'
 //import { PromiseProvider } from 'mongoose';
 import {useDispatch} from 'react-redux'
-import { loginUser} from '../../../_actions/user_action';
+import { loginUser } from '../../../_actions/user_action';
+
 
 
 function LoginPage(props) {
-    const dispatch =  useDispatch
+    const dispatch =  useDispatch();
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
     
@@ -25,15 +26,16 @@ function LoginPage(props) {
             email: Email,
             Password: Password
         }
-        /*dispatch(loginUser(body)) <<dispatch onSubmitHandler 함수 밖으로 꺼내야되는데 어케 꺼내지..흠.....
+        dispatch(loginUser(body)) 
             .then(response => {
                 if(response.payload.loginSuccess){
-                    props.history.push('/')
+                    return props.history.push('/')
+                    
                 }
                 else{
-                    alert("Error")
+                    return alert("Error")
                 }
-            })*/
+            })
         
     }
 

@@ -11,9 +11,9 @@ function LandingPage(props) {
         Axios.get('/api/users/logout')
         .then(response => {
             if(response.data.success){
-                props.history.push("/login")
+                return props.history.push("/Login")
             }else{
-                alert("로그아웃 실패")
+                return alert("로그아웃 실패")
             }
         })
     }

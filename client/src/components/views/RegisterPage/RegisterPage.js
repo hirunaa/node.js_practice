@@ -3,7 +3,7 @@ import {useDispatch} from 'react-redux'
 import { registerUser } from '../../../_actions/user_action';
 
 function RegisterPage(props) {
-    const dispatch =  useDispatch
+    const dispatch =  useDispatch();
 
     const [Email, setEmail] = useState("")
     const [Password, setPassword] = useState("")
@@ -27,7 +27,7 @@ function RegisterPage(props) {
         console.log(Email)
         console.log(Password)
 
-        if(Password!=ConfirmPassword)
+        if(Password!==ConfirmPassword)
         {
             return alert("비밀번호와 비밀번호 확인은 같아야 합니다.")
         }
@@ -37,15 +37,15 @@ function RegisterPage(props) {
             Password: Password,
             name: Name
         }
-        /*
+        
         dispatch(registerUser(body)) 
             .then(response => {
                 if(response.payload.success){
-                    props.history.push("/Login")
+                    return props.history.push("/Login")
                 }else{
-                    alert("Failed to sign up")
+                    return alert("Failed to sign up")
                 }
-            })*/
+            })
         
     }
     return (
