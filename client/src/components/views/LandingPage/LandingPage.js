@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import Axios from 'axios'
-
+import { withRouter } from 'react-router-dom';
 function LandingPage(props) {
     useEffect(() => {
         Axios.get('/api/hello')
@@ -31,4 +31,4 @@ function LandingPage(props) {
     )
 }
 
-export default LandingPage
+export default withRouter(LandingPage)

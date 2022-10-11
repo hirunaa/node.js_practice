@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 //import { PromiseProvider } from 'mongoose';
 import {useDispatch} from 'react-redux'
 import { loginUser } from '../../../_actions/user_action';
-
-
+import { withRouter } from 'react-router-dom';
 
 function LoginPage(props) {
     const dispatch =  useDispatch();
@@ -19,8 +18,8 @@ function LoginPage(props) {
     }
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        console.log(Email)
-        console.log(Password)
+        //console.log(Email)
+        //console.log(Password)
 
         let body = {
             email: Email,
@@ -61,4 +60,4 @@ function LoginPage(props) {
     )
 }
 
-export default LoginPage
+export default withRouter(LoginPage)

@@ -24,8 +24,8 @@ function RegisterPage(props) {
     }
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        console.log(Email)
-        console.log(Password)
+        //console.log(Email)
+        //console.log(Password)
 
         if(Password!==ConfirmPassword)
         {
