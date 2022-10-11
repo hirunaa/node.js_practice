@@ -34,7 +34,7 @@ function RegisterPage(props) {
 
         let body = {
             email: Email,
-            Password: Password,
+            password: Password,
             name: Name
         }
         

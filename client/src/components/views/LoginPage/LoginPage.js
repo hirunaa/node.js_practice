@@ -24,7 +24,7 @@ function LoginPage(props) {
 
         let body = {
             email: Email,
-            Password: Password
+            password: Password
         }
         dispatch(loginUser(body)) 
             .then(response => {

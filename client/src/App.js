@@ -2,7 +2,7 @@ import React from 'react';
 import LandingPage from './components/views/LandingPage/LandingPage.js'
 import LoginPage from './components/views/LoginPage/LoginPage.js'
 import RegisterPage from './components/views/RegisterPage/RegisterPage.js'
-import  Auth  from './hoc/auth'
+//import  Auth  from './hoc/auth'
 import {
   BrowserRouter as Router,
   Switch,

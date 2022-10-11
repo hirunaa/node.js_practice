@@ -22,6 +22,7 @@ app.get('/api/hello', (req, res) => {
 })
 app.post('/api/users/register', (req, res) => {
     const user = new User(req.body)
+    //console.log(req.body)
     user.save((err, userInfo) => {
         if (err) {
             return res.json({ success: false, err })
@@ -67,6 +68,7 @@ app.get('/api/users/auth', auth, (req, res) => {
         isAdmin: req.user.role === 0 ? false : true,
         isAuth: true,
         email: req.user.email,
+        password: req.user.password,
         name: req.user.name,
         lastname: req.user.lastname,
         role: req.user.role,
